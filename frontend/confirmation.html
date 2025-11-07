@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - Grand Hotel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">🏨 Grand Hotel</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Book Now</a></li>
+                <li><a href="bookings.html">View Bookings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="confirmation-container">
+        <div class="success-icon">✓</div>
+        <h2>Booking Confirmed!</h2>
+        <p class="success-message">Thank you for choosing Grand Hotel. Your reservation has been confirmed.</p>
+        
+        <div class="booking-details" id="bookingDetails">
+            <h3>Booking Reference: <span id="bookingRef"></span></h3>
+            <div class="detail-row">
+                <span class="label">Guest Name:</span>
+                <span id="guestName"></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Email:</span>
+                <span id="email"></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Phone:</span>
+                <span id="phone"></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Check-in:</span>
+                <span id="checkIn"></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Check-out:</span>
+                <span id="checkOut"></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Room Type:</span>
+                <span id="roomType"></span>
+            </div>
+            <div class="detail-row">
+                <span class="label">Guests:</span>
+                <span id="guests"></span>
+            </div>
+            <div class="detail-row" id="specialRequestsRow" style="display: none;">
+                <span class="label">Special Requests:</span>
+                <span id="specialRequests"></span>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <a href="bookings.html" class="btn btn-primary">View All Bookings</a>
+            <a href="index.html" class="btn btn-secondary">Return to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Grand Hotel. All rights reserved.</p>
+    </footer>
+
+    <script src="js/confirmation.js"></script>
+</body>
+</html>
