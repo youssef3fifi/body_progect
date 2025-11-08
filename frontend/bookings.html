@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Bookings - Grand Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <h1 class="logo">🏨 Grand Hotel</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Book Now</a></li>
-                <li><a href="bookings.html" class="active">View Bookings</a></li>
-            </ul>
+            <a class="navbar-brand logo" href="index.html">🏨 Grand Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="bookings.html">View Bookings</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="bookings-container">
-        <h2>All Bookings</h2>
-        <div id="bookingsList" class="bookings-list">
-            <p class="loading">Loading bookings...</p>
+    <div class="container my-5">
+        <div class="bookings-container">
+            <h2 class="text-center mb-4">All Bookings</h2>
+            <div id="bookingsList" class="row">
+                <p class="text-center">Loading bookings...</p>
+            </div>
         </div>
     </div>
 
@@ -29,6 +38,7 @@
         <p>&copy; 2025 Grand Hotel. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/viewBookings.js"></script>
 </body>
 </html>

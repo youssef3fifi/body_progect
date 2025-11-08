@@ -1,6 +1,6 @@
 # Hotel Booking System 🏨
 
-A full-stack hotel room registration system with a beautiful multi-page interface.
+A full-stack hotel room registration system with a beautiful, modern, and responsive multi-page interface built with Bootstrap 5.
 
 ## Features
 
@@ -11,7 +11,7 @@ A full-stack hotel room registration system with a beautiful multi-page interfac
 
 ## Tech Stack
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+), Bootstrap 5
 - **Backend**: Node.js, Express.js
 - **Data Storage**: JSON file-based storage
 - **API**: RESTful API endpoints

@@ -12,7 +12,23 @@ async function loadBookings() {
         bookings.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         bookingsList.innerHTML = bookings.map(booking => {
             const roomTypes = {'single': 'Single Room', 'double': 'Double Room', 'suite': 'Suite'};
-            return `<div class="booking-card"><h3>Booking #${booking.id}</h3><div class="booking-info"><div class="info-item"><span class="label">Guest Name</span><span class="value">${booking.guestName}</span></div><div class="info-item"><span class="label">Email</span><span class="value">${booking.email}</span></div><div class="info-item"><span class="label">Phone</span><span class="value">${booking.phone}</span></div><div class="info-item"><span class="label">Check-in</span><span class="value">${new Date(booking.checkIn).toLocaleDateString()}</span></div><div class="info-item"><span class="label">Check-out</span><span class="value">${new Date(booking.checkOut).toLocaleDateString()}</span></div><div class="info-item"><span class="label">Room Type</span><span class="value">${roomTypes[booking.roomType] || booking.roomType}</span></div><div class="info-item"><span class="label">Guests</span><span class="value">${booking.guests}</span></div>${booking.specialRequests ? `<div class="info-item" style="grid-column: 1 / -1;"><span class="label">Special Requests</span><span class="value">${booking.specialRequests}</span></div>` : ''}</div></div>`;
+            return `
+                <div class="col-md-6 mb-4">
+                    <div class="booking-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Booking #${booking.id}</h5>
+                            <p class="card-text"><strong>Guest:</strong> ${booking.guestName}</p>
+                            <p class="card-text"><strong>Email:</strong> ${booking.email}</p>
+                            <p class="card-text"><strong>Phone:</strong> ${booking.phone}</p>
+                            <p class="card-text"><strong>Check-in:</strong> ${new Date(booking.checkIn).toLocaleDateString()}</p>
+                            <p class="card-text"><strong>Check-out:</strong> ${new Date(booking.checkOut).toLocaleDateString()}</p>
+                            <p class="card-text"><strong>Room Type:</strong> ${roomTypes[booking.roomType] || booking.roomType}</p>
+                            <p class="card-text"><strong>Guests:</strong> ${booking.guests}</p>
+                            ${booking.specialRequests ? `<p class="card-text"><strong>Special Requests:</strong> ${booking.specialRequests}</p>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
         }).join('');
     } catch (error) {
         console.error('Error:', error);
