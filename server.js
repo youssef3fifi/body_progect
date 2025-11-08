@@ -7,7 +7,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'https://3fifi-project.s3.eu-north-1.amazonaws.com',
+    'http://localhost:3000',
+    'http://13.61.212.85'
+  ],
+  credentials: true
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static('frontend'));
 

@@ -1,4 +1,4 @@
-const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : '/api';
+const API_URL = 'http://13.61.212.85/api';
 
 document.getElementById('bookingForm').addEventListener('submit', async (e) => {
     e.preventDefault();
