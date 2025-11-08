@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 const corsOptions = {
   origin: [
-    'https://3fifi-project.s3.eu-north-1.amazonaws.com',
+    'http://3fifi-project.s3-website.eu-north-1.amazonaws.com',
     'http://localhost:3000',
     'http://13.61.212.85'
   ],
